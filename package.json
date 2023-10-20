@@ -4,7 +4,8 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev ",
-    "export": "slidev export"
+    "export": "slidev export",
+    "build-github": "slidev build --base /mojo-construction-slidev"
   },
   "dependencies": {
     "@slidev/cli": "^0.43.7",
