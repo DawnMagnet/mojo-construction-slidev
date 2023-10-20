@@ -9,7 +9,6 @@ drawings:
 transition: slide-left
 title: Mojo中的构造函数-Mojo开发者交流会第三期
 mdc: true
-monaco: true
 ---
 
 # Mojo中的构造函数
