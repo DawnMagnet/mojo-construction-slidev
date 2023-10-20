@@ -205,23 +205,7 @@ int main() {
 
 这些函数在值语义下不会出问题，而且很高效，但是一旦在类中使用指针，就会出现严重的内存安全问题。
 
-```cpp {monaco-diff}
-class HeapArray {
-    int *data;
-    int size;
-public:
-    HeapArray(HeapArray &g) = default;
-    HeapArray() {
-        data = new int[10];
-        size = 10;
-        cout << "HeapArray" << endl;
-    }
-    ~HeapArray() {
-        cout << "~HeapArray:" << (unsigned long) data << endl;
-        delete data;
-    }
-};
-~~~
+```cpp {all|5-10|18}
 class HeapArray {
     int *data;
     int size;
@@ -378,9 +362,9 @@ fn main():
 | 是否阻止原对象析构   | ✗              | ✗                              | ✓                                  |
 | 适合哪种类型的任务   | 需要拷贝多份   | 更加灵活，但是容易出现内存问题 | 某个资源的所有权只能由一个变量拥有 |
 
-
 ---
 layout: center
 class: text-center
 ---
+
 # 欢迎大家的聆听！
